@@ -82,4 +82,10 @@ Json 변환라이브러리는 Gson(구글), Jackson 2개가 있다
 이전에 만들었던 Repository를 사용하여 Service클래스를 작성한다.
 리팩토링 메뉴 열기 단축키 => Ctrl + T
 
+회원 서비스 개발 테스트
+테스트는 given, when, then을 구분해 작성하는것이 좋다.
+Try Catch문을 사용한 테스트와 assertThrows 람다식을 사용한 테스트 
+테스트 케이스 작성법 및 
+Service를 생성하면서 Repository를 넣어주는
+Dependency Injection 방법
 
