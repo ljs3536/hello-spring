@@ -143,3 +143,9 @@ JPA
 h2database 설치 후 
 JDBC URL을 jdbc:h2:tcp://localhost/~/test로 변경해야한다.
 
+/23-12-30
+순수 JDBC
+개방-폐쇄 원칙(OCP, Open-Closed Principle)
+확장에는 열려있고, 수정에는 닫혀있다.
+스프링의 DI(Dependencied Injection)을 사용하면 "기존 코드를 전혀 손대지 않고, 설정만으로 구현 클래스를 변경"할 수 있다.
+
