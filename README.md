@@ -127,4 +127,19 @@ Config클래스를 생성해 @Configuration 어노테이션을 사용하고 @Bea
 회원 웹 기능 - 홈화면 추가
 localhost:8080요청이 오면 스프링 컨트롤러에서 해당 매핑이 있는지 확인하고 없으면 정적 컨트츠를 제공하기 때문에 매핑되는 페이지를 만들면 해당 부분을 반환한다.
 
+/23-12-28
+화면 웹 기능 - 등록
+화면 웹 기능 - 조회
+
+스프링 DB 접근 기술
+
+스프링 데이터 엑세스
+H2 데이터 베이스 설치
+순수 Jdbc 
+스프링 JdbcTemplate
+JPA
+스프링 데이터 JPA
+
+h2database 설치 후 
+JDBC URL을 jdbc:h2:tcp://localhost/~/test로 변경해야한다.
 
