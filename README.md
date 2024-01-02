@@ -163,3 +163,12 @@ JDBC URL을 jdbc:h2:tcp://localhost/~/test로 변경해야한다.
 순수 Jdbc와 동일한 환경설정을 하면 된다.
 스프링 JdbcTemplate와 Mybatis같은 라이브러리는 JDBC API에서 본 반복 코드를 대부분 제거해준다. 하지만 SQL은 직접 작성해야한다.
 
+JPA
+- JPA는 기존의 반복 코드는 물론이고, 기본적인 SQL도 JPA가 직접 만들어서 실행해준다.
+- JPA를 사용하면, SQL과 데이터 중심의 설계에서 객체 중심의 설계로 패러다임을 전환을 할 수 있다.
+- JPA를 사용하면 개발 생산성을 크게 높일 수 있다.
+
+spring-boot-starter-data-jpa는 내부에 jdbc 관련 라이브러리를 포함한다. 따라서 jdbc는 제거해도 된다.
+
+
+
