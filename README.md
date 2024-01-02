@@ -170,5 +170,36 @@ JPA
 
 spring-boot-starter-data-jpa는 내부에 jdbc 관련 라이브러리를 포함한다. 따라서 jdbc는 제거해도 된다.
 
+/24-01-02
+스프링 데이터 JPA
+
+스프링 데이터 JPA를 사용하기 위해서 Interface를 생성하고 JpaRepsotory<객체,키 타입>와 해당 객체리포지토리를 extends 받는다.
+이렇게 설정하면 스프링 데이터 JPA가 SpringDataJpaMemberRepository(생성한 interface)를 스프링 빈으로 자동 등록해준다.
+
+스프링 데이터 JPA 제공 기능 
+- 인터페이스를 통한 기본적인 CRUD
+- findByName(), findByEmail()처럼 메서드 이름 만으로 조회 기능 제공
+- 페이징 기능 자동 제공
+
+참고 : 실무에서는 JPA와 스프링 데이터 JPA를 기본으로 사용하고, 복잡한 동적 쿼리는 Querydsl이라는 라이브러리를 사용하면 된다.
+Querydsl을 사용하면 쿼리도 자바 코드로 안전하게 작성할 수 있고, 동적 쿼리도 편리하게 작성할 수 있다.
+이 조합으로 해결하기 어려운 쿼리는 JPA가 제공하는 네이티브 쿼리를 사용하거나, 앞서 학습한 스프링 JdbcTemplate를 사용하면 된다.
+
+AOP
+AOP가 필요한 상황
+- 모든 메소드의 호출 시간을 측정하고 싶다면?
+- 공통 관심 사항(cross-cutting concern) vs 핵심 관심 사항(core concern)
+- 회원 가입 시간, 회원 조회 시간을 측정하고 싶다면?
+
+AOP적용
+- AOP : Aspect Oriented Programming
+- 공통 관심 사항(cross-cutting concern) vs 핵심 관심 사항(core concern) 분리
+
+"해결"
+- 회원가입, 회원 조회등 핵심 관심사항과 시간을 측정하는 공통 관심 사항을 분리한다.
+- 시간을 측정하는 로직을 별도의 공통 로직으로 만들었다.
+- 핵심 관심사항을 깔끔하게 유지할 수 있다.
+- 변경이 필요하면 이 로직만 변경하면 된다.
+- 원하는 적용 대상을 선택할 수 있다.
 
 
